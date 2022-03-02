@@ -33,29 +33,29 @@ RenameBot = Client(
 
 START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('🚴 Oᴡɴᴇʀ', url='https://telegram.me/Tellybots'),
-        InlineKeyboardButton('🌀 ᴀʙᴏᴜᴛ', callback_data='about')
+        InlineKeyboardButton(' ʜᴇʟᴘ', url='https://telegram.me/Tellybots'),
+        InlineKeyboardButton(' ᴀʙᴏᴜᴛ', callback_data='about')
         ],[
-        InlineKeyboardButton('💡 ʜᴇʟᴘ', callback_data='help'),
-        InlineKeyboardButton('⚙️ Sᴇᴛᴛɪɴɢs', callback_data='openSettings')
+        InlineKeyboardButton(' sᴜᴘᴘᴏʀᴛ', callback_data='help'),
+        InlineKeyboardButton(' sᴇᴛᴛɪɴɢs', callback_data='openSettings')
         ],[
-        InlineKeyboardButton('🗑️ ᴄʟᴏsᴇ', callback_data='close')
+        InlineKeyboardButton(' ᴄʟᴏsᴇ', callback_data='close')
         ]]
     )
 
 HELP_BUTTONS = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("🔰 Hᴏᴍᴇ", callback_data="home"),
-                 InlineKeyboardButton("🌀 ᴀʙᴏᴜᴛ", callback_data="about"),
-                 InlineKeyboardButton("🗑️ ᴄʟᴏsᴇ", callback_data="close")]
+                [InlineKeyboardButton(" ʜᴏᴍᴇ", callback_data="home"),
+                 InlineKeyboardButton(" ᴀʙᴏᴜᴛ", callback_data="about"),
+                 InlineKeyboardButton(" ᴄʟᴏsᴇ", callback_data="close")]
             ]
         )
 
 ABOUT_BUTTONS = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("📝 Fᴇᴇᴅʙᴀᴄᴋ ᴅᴇᴠ", url="https://t.me/Tellybots_support")],
-                [InlineKeyboardButton("🔰 Hᴏᴍᴇ", callback_data="home"),
-                 InlineKeyboardButton("🗑️ ᴄʟᴏsᴇ", callback_data="close")]
+                [InlineKeyboardButton(" ʜᴇʟᴘ", url="https://t.me/Tellybots_support")],
+                [InlineKeyboardButton(" ʜᴏᴍᴇ", callback_data="home"),
+                 InlineKeyboardButton(" ᴄʟᴏsᴇ", callback_data="close")]
             ]
         )
 
@@ -164,10 +164,10 @@ async def rename_handler(bot: Client, event: Message):
                 ascii_ = ''.join([i if (i in string.digits or i in string.ascii_letters or i == " ") else "" for i in ask_.text.rsplit('.', 1)[0]])
                 new_file_name = f"{download_location}{ascii_.replace(' ', ' ')}.{media.file_name.rsplit('.', 1)[-1]}"
                 if len(new_file_name) > 255:
-                    await reply_.edit("**😕 Make it Smaller... Don't write essays!!**")
+                    await reply_.edit("**😕 Mᴀᴋᴇ ɪᴛ Sᴍᴀʟʟᴇʀ... Dᴏɴ'ᴛ ᴡʀɪᴛᴇ ᴇssᴀʏs!!**")
                     return
                 await ask_.delete(True)
-                await reply_.edit("**📥 Trying to Download...**")
+                await reply_.edit("**📥 Tʀʏɪɴɢ ᴛᴏ Dᴏᴡɴʟᴏᴡɴʟᴏᴀᴅ...**")
                 await asyncio.sleep(Config.SLEEP_TIME)
                 c_time = time.time()
                 try:
@@ -176,7 +176,7 @@ async def rename_handler(bot: Client, event: Message):
                         file_name=new_file_name,
                         progress=progress_for_pyrogram,
                         progress_args=(
-                            "**Downloading... 😴**",
+                            "**Downloading... **",
                             reply_,
                             c_time
                         )

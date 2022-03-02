@@ -12,11 +12,11 @@ async def OpenSettings(event: Message, user_id: int):
             text="**⚙ Configure My Behaviour**",
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton(f"🔰 Upload as Document {'✅' if ((await db.get_upload_as_doc(user_id)) is True) else '❌'}",
+                    [InlineKeyboardButton(f"📥 ᴜᴘʟᴏᴀᴅ ᴀs  {'ғɪʟᴇ' if ((await db.get_upload_as_doc(user_id)) is True) else 'ᴠɪᴅᴇᴏ'}",
                                           callback_data="triggerUploadMode")],
-                    [InlineKeyboardButton("🌆 Custom Thumbnail ", callback_data="triggerThumbnail")],
-                    [InlineKeyboardButton("📝 Custom Caption ", callback_data="triggerCaption")],
-                    [InlineKeyboardButton("⛔ Close Settings", callback_data="closeMeh")]
+                    [InlineKeyboardButton("🌉 ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ", callback_data="triggerThumbnail")],
+                    [InlineKeyboardButton("📝 ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ ", callback_data="triggerCaption")],
+                    [InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="closeMeh")]
                 ]
             )
         )

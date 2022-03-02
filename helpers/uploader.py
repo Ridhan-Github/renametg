@@ -36,7 +36,7 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
             document=file_path,
             progress=progress_for_pyrogram,
             progress_args=(
-                "**📤 Uploading File...**",
+                "**📤 Uᴘʟᴏᴀᴅɪɴɢ Fɪʟᴇ...**",
                 message,
                 c_time
             ),
@@ -45,23 +45,23 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
             caption=((f"**{file_path.rsplit('/', 1)[-1]}**\n\n{Config.CAPTION}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/AVBotz/5")]
+                    [InlineKeyboardButton("Mᴏʀᴇ Bᴏᴛs", url="https://t.me/AVBotz/5")]
                 ]
             )
         )
         await asyncio.sleep(Config.SLEEP_TIME)
         forward_ = await sent_.forward(chat_id=Config.LOG_CHANNEL)
         await forward_.reply_text(
-            text=f"**User: [{message.chat.first_name}](tg://user?id={str(message.chat.id)})**\n**Username: {message.chat.username}**",
+            text=f"**ᴜsᴇʀ: [{message.chat.first_name}](tg://user?id={str(message.chat.id)})**\n**ᴜsᴇʀ ɴᴀᴍᴇ: {message.chat.username}**",
             disable_web_page_preview=True,
             quote=True
         )
     except Exception as err:
         try:
-            await message.edit(f"**Failed To Upload, Contact [Here](https://t.me/AVBotz_Support)**")
+            await message.edit(f"**Fᴀɪʟᴇᴅ ᴛᴏ Uᴘʟᴏᴀᴅ, Cᴏɴᴛᴀᴄᴛ [ʜᴇʀᴇ](https://t.me/AVBotz_Support)**")
             await asyncio.sleep(50)
         except:
-            print(f"**Failed to Upload File!\nError: {err}**")
+            print(f"**Fᴀɪʟᴇᴅ ᴛᴏ Uᴘʟᴏᴀᴅ Fɪʟᴇ!\nEʀʀᴏʀ: {err}**")
     await delete_one(file_path)
     if Config.ONE_PROCESS_ONLY:
         await CheckTimeGap(message.chat.id, rm_gap=True)
@@ -224,7 +224,7 @@ async def UploadAudio(bot: Client, message: Message, file_path: str, file_size, 
             audio=file_path,
             progress=progress_for_pyrogram,
             progress_args=(
-                "**📤 Uploading Audio...**",
+                "**📤 Uᴘʟᴏᴀᴅɪɴɢ Aᴜᴅɪᴏ...**",
                 message,
                 c_time
             ),
@@ -235,7 +235,7 @@ async def UploadAudio(bot: Client, message: Message, file_path: str, file_size, 
             caption=((f"**{file_path.rsplit('/', 1)[-1]}**\n\n{Config.CAPTION}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("👀 More Amazing Botz 🤖", url="https://t.me/AVBotz/5")]
+                    [InlineKeyboardButton("Mᴏʀᴇ Bᴏᴛs", url="https://t.me/AVBotz/5")]
                 ]
             )
         )

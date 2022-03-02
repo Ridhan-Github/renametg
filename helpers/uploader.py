@@ -45,7 +45,7 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
             caption=((f"**{file_path.rsplit('/', 1)[-1]}**\n\n{Config.CAPTION}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Mᴏʀᴇ Bᴏᴛs", url="https://t.me/AVBotz/5")]
+                    [InlineKeyboardButton("Mᴏʀᴇ Bᴏᴛs", url="https://t.me/Disney_Bots/4")]
                 ]
             )
         )
@@ -58,8 +58,8 @@ async def UploadFile(bot: Client, message: Message, file_path: str, file_size):
         )
     except Exception as err:
         try:
-            await message.edit(f"**Fᴀɪʟᴇᴅ ᴛᴏ Uᴘʟᴏᴀᴅ, Cᴏɴᴛᴀᴄᴛ [ʜᴇʀᴇ](https://t.me/AVBotz_Support)**")
-            await asyncio.sleep(50)
+            await message.edit(f"**Fᴀɪʟᴇᴅ ᴛᴏ Uᴘʟᴏᴀᴅ, Cᴏɴᴛᴀᴄᴛ [ʜᴇʀᴇ](https://t.me/DisneyBots_Support)**")
+            await asyncio.sleep(10)
         except:
             print(f"**Fᴀɪʟᴇᴅ ᴛᴏ Uᴘʟᴏᴀᴅ Fɪʟᴇ!\nEʀʀᴏʀ: {err}**")
     await delete_one(file_path)
@@ -196,7 +196,7 @@ async def UploadVideo(bot: Client, message: Message, file_path: str, file_size, 
                     except Exception as err:
         try:
             await message.edit(f"**Something Went Wrong... Contact [Here](https://t.me/AVBotz_Support)**")
-            await asyncio.sleep(50)
+            await asyncio.sleep(10)
         except:
             print(f"**Failed to Upload File!\nError: {err}**")
     await delete_one(file_path)
@@ -235,7 +235,7 @@ async def UploadAudio(bot: Client, message: Message, file_path: str, file_size, 
             caption=((f"**{file_path.rsplit('/', 1)[-1]}**\n\n{Config.CAPTION}") if (caption_ is None) else caption_),
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("Mᴏʀᴇ Bᴏᴛs", url="https://t.me/AVBotz/5")]
+                    [InlineKeyboardButton("Mᴏʀᴇ Bᴏᴛs", url="https://t.me/Disney_Bots/4")]
                 ]
             )
         )
@@ -248,11 +248,11 @@ async def UploadAudio(bot: Client, message: Message, file_path: str, file_size, 
         )
     except Exception as err:
         try:
-            await message.edit(f"**Failed To Upload, Contact [Here](https://t.me/AVBotz_Support)**")
-            await asyncio.sleep(50)
+            await message.edit(f"**Fᴀɪʟᴇᴅ ᴛᴏ Uᴘʟᴏᴀᴅ, Cᴏɴᴛᴀᴄᴛ [ʜᴇʀᴇ](https://t.me/Disneybots_support)**")
+            await asyncio.sleep(10)
             raise err
         except:
-            print(f"**😐 Failed to Upload File!\nError: {err}**")
+            print(f"**Fᴀɪʟᴇᴅ ᴛᴏ Uᴘʟᴏᴀᴅ Fɪʟᴇ!\nEʀʀᴏʀ: {err}**")
     await delete_one(file_path)
     if Config.ONE_PROCESS_ONLY:
         await CheckTimeGap(message.chat.id, rm_gap=True)

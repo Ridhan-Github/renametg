@@ -389,20 +389,20 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await SetupPrefix(ask_.text, user_id=cb.from_user.id, editable=cb.message)
             elif ask_.text and (ask_.text.startswith("/") is True):
                 await cb.message.edit(
-                    text="**Current Process Cancelled!**",
+                    text="**Cᴜʀʀᴇɴᴛ Pʀᴏᴄᴇss Cᴀɴᴄᴇʟʟᴇᴅ!**",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="openSettings")]])
                 )
         except TimeoutError:
             await cb.message.edit(
-                text="**I Can't Wait More... BYE 👋🏻**",
+                text="**I ᴄᴀɴ'ᴛ ᴡᴀɪᴛ ᴍᴏʀᴇ... ʙʏᴇ 👋🏻**",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="openSettings")]])
             )
     elif "triggerPrefix" in cb.data:
         current_prefix = await db.get_prefix(cb.from_user.id)
         if current_prefix is None:
-            await cb.answer("No Prefix Found... ", show_alert=True)
+            await cb.answer("Nᴏ Pʀᴇғɪx Fᴏᴜɴᴅ... ", show_alert=True)
             await cb.message.edit(
-                text="**Send me a File Name Prefix!**"
+                text="**Sᴇɴᴅ ᴍᴇ ᴀ Fɪʟᴇ Nᴀᴍᴇ Pʀᴇғɪx!**"
             )
             try:
                 ask_: Message = await bot.listen(cb.message.chat.id, timeout=300)
@@ -411,17 +411,17 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     await SetupPrefix(ask_.text, user_id=cb.from_user.id, editable=cb.message)
                 elif ask_.text and (ask_.text.startswith("/") is True):
                     await cb.message.edit(
-                        text="**Current Process Cancelled!**",
+                        text="**Cᴜʀʀᴇɴᴛ Pʀᴏᴄᴇss Cᴀɴᴄᴇʟʟᴇᴅ!**",
                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="openSettings")]])
                     )
             except TimeoutError:
                 await cb.message.edit(
-                    text="**I Can't Wait More... BYE 👋🏻**",
+                    text="**I ᴄᴀɴ'ᴛ ᴡᴀɪᴛ ᴍᴏʀᴇ... ʙʏᴇ**",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="openSettings")]])
                 )
         else:
             await cb.message.edit(
-                text=f"**Current Prefix:** `{current_prefix}`",
+                text=f"**Cᴜʀʀᴇɴᴛ Pʀᴇғɪx:** `{current_prefix}`",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [InlineKeyboardButton("sᴇᴛ ɴᴇᴡ ᴘʀᴇғɪx", callback_data="forceNewPrefix")],
@@ -440,14 +440,14 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     chat_id=cb.message.chat.id,
                     photo=thumbnail,
                     text=f"**ʏᴏᴜʀ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ...**",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🗑️ Delete Thumbnail", callback_data="deleteThumbnail")]])
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🗑️ ᴅᴇʟᴇᴛᴇ ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="deleteThumbnail")]])
                 )
             except Exception as err:
                 try:
                     await bot.send_message(
                         chat_id=cb.message.chat.id,
                         text=f"**😐 ᴜɴᴀʙʟᴇ ᴛᴏ sᴇɴᴅ ᴛʜᴜᴍʙɴᴀɪɴ! Gᴏᴛ ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ Eʀʀᴏʀ**",
-                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Cʟᴏsᴇ", callback_data="closeMeh")],[InlineKeyboardButton("📮 Report issue", url="https://t.me/AVBotz_Support")]])
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʟᴏsᴇ", callback_data="closeMeh")],[InlineKeyboardButton("📮 Report issue", url="https://t.me/AVBotz_Support")]])
                     )
                 except:
                     pass
@@ -460,15 +460,15 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         if custom_caption_ is not None:
             try:
                 await cb.message.edit(
-                    text=f"**Current Custom Caption:**\n\n`{custom_caption_}`",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Cʜᴀɴɢᴇ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ ✍︎", callback_data="forceChangeCaption")]])
+                    text=f"**Cᴜʀʀᴇɴᴛ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ:**\n\n`{custom_caption_}`",
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("✍︎ Cʜᴀɴɢᴇ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ", callback_data="forceChangeCaption")]])
                 )
             except MessageNotModified:
                 pass
             if "forceChangeCaption" not in cb.data:
                 return
         elif custom_caption_ is None:
-            await cb.answer("You didn't set any File Caption!", show_alert=True)
+            await cb.answer("Yᴏᴜ ᴅɪᴅɴ'ᴛ sᴇᴛ ᴀɴʏ Fɪʟᴇ Cᴀᴘᴛɪᴏɴʟʟ!", show_alert=True)
         await cb.message.edit(
             text="**Sᴇɴᴛ ᴍᴇ Cᴜsᴛᴏᴍ Fɪʟᴇ Cᴀᴘᴛɪᴏɴ!**"
         )
@@ -491,7 +491,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await ask_.delete(True)
                 await db.set_caption(cb.from_user.id, caption=caption)
                 await cb.message.edit(
-                    "**Custom Caption Removed Successfully!**",
+                    "**Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ Rᴇᴍᴏᴠᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ!**",
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("ʙᴀᴄᴋ ᴛᴏ sᴇᴛᴛɪɴɢs", callback_data="openSettings")],
                         [InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="closeMeh")]
@@ -499,14 +499,14 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 )
             elif ask_.text and (ask_.text.startswith("/") is True):
                 await cb.message.edit(
-                    text="**Process Cancelled!**",
+                    text="**Pʀᴏᴄᴇss Cᴀɴᴄᴇʟʟᴇᴅ!**",
                     reply_markup=InlineKeyboardMarkup(
                         [[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="openSettings")]])
                 )
         except TimeoutError:
             await cb.message.edit(
-                text="**🤬 I can't wait more.... BYE 👋🏻**",
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔚 Go Back", callback_data="openSettings")]])
+                text="**🤬 I ᴄᴀɴ'ᴛ ᴡᴀɪᴛ ᴍᴏʀᴇ.... ʙʏᴇ**",
+                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʙᴀᴄᴋ", callback_data="openSettings")]])
             )
 
 

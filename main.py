@@ -293,7 +293,7 @@ async def show_thumb_handler(bot: Client, event: Message):
                 await bot.send_message(
                     chat_id=event.chat.id,
                     text=f"**😐 ᴜɴᴀʙʟᴇ ᴛᴏ sᴇɴᴛ ᴛʜᴜᴍʙɴᴀɪʟ! Gᴏᴛ ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ Eʀʀᴏʀ**",
-                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="closeMeh")],[InlineKeyboardButton("📮 Report issue", url="https://t.me/AVBotz_Support")]]),
+                    reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="closeMeh")],[InlineKeyboardButton("📮 Report issue", url="https://t.me/Disneybots_Support")]]),
                     reply_to_message_id=event.message_id
                 )
             except:
@@ -447,7 +447,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     await bot.send_message(
                         chat_id=cb.message.chat.id,
                         text=f"**😐 ᴜɴᴀʙʟᴇ ᴛᴏ sᴇɴᴅ ᴛʜᴜᴍʙɴᴀɪɴ! Gᴏᴛ ᴀɴ ᴜɴᴇxᴘᴇᴄᴛᴇᴅ Eʀʀᴏʀ**",
-                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʟᴏsᴇ", callback_data="closeMeh")],[InlineKeyboardButton("📮 Report issue", url="https://t.me/AVBotz_Support")]])
+                        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ʟᴏsᴇ", callback_data="closeMeh")],[InlineKeyboardButton("📮 Report issue", url="https://t.me/DisneyBots_Support")]])
                     )
                 except:
                     pass

@@ -195,7 +195,7 @@ async def UploadVideo(bot: Client, message: Message, file_path: str, file_size, 
                     )
                     except Exception as err:
         try:
-            await message.edit(f"**Something Went Wrong... Contact [Here](https://t.me/AVBotz_Support)**")
+            await message.edit(f"**Something Went Wrong... Contact [Here](https://t.me/DisneyBots_Support)**")
             await asyncio.sleep(10)
         except:
             print(f"**Failed to Upload File!\nError: {err}**")

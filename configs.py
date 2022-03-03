@@ -21,15 +21,13 @@ class Config(object):
     DOWNLOAD_START ="Processing To Download"
     # Telegram maximum file upload size
     SAVED_RECVD_DOC_FILE ="Your 🗃️ Saved"
-    START_TEXT = """Hey {} 🙋
+    START_TEXT = """👋 Hᴇʟʟᴏ , {} 
 
-I am a TG Renamer bot with permanent thumbnail support.
+Tʜɪꜱ ɪꜱ ꜰɪʟᴇ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ᴡɪᴛʜ ғɪʟᴇ ᴄᴀᴘᴛɪᴏɴ
 
-Press /settings to change my settings ⚙.
+Pʀᴇꜱꜱ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏ...
 
-📛 For More Details check Help
-
-Maintained By:  [Tellybots](t.me/Tellybots)
+Pᴏᴡᴇʀᴇᴅ ʙʏ : [ᴅɪsɴᴇʏ ʙᴏᴛ](t.me/Disney_bots)
 
 """
     PROGRESS = """

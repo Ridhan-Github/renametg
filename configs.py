@@ -10,7 +10,7 @@ class Config(object):
     SESSION_NAME = os.environ.get("SESSION_NAME", "Rename-Bot-0")
     SLEEP_TIME = int(os.environ.get("SLEEP_TIME", 5))
     BOT_OWNER = int(os.environ.get("BOT_OWNER", 1445283714))
-    CAPTION = "**© By @Tellybots 💕**"
+    CAPTION = "**© ᴊᴏɪɴ : @Disney_Bots **"
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", None)
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -100))
     MONGODB_URI = os.environ.get("MONGODB_URI", "")
@@ -18,9 +18,9 @@ class Config(object):
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
     ONE_PROCESS_ONLY = bool(os.environ.get("ONE_PROCESS_ONLY", False))
     DOWNLOAD_LOCATION = "./DOWNLOADS"
-    DOWNLOAD_START ="Processing To Download"
+    DOWNLOAD_START ="Pʀᴏᴄᴇssɪɴɢ ᴛᴏ Dᴏᴡɴʟᴏᴀᴅ"
     # Telegram maximum file upload size
-    SAVED_RECVD_DOC_FILE ="Your 🗃️ Saved"
+    SAVED_RECVD_DOC_FILE ="ʏᴏᴜʀ ғɪʟᴇ sᴀᴠᴇᴅ"
     START_TEXT = """👋 Hᴇʟʟᴏ , {} 
 
 Tʜɪꜱ ɪꜱ ꜰɪʟᴇ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ᴡɪᴛʜ ғɪʟᴇ ᴄᴀᴘᴛɪᴏɴ
@@ -31,20 +31,19 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : [ᴅɪsɴᴇʏ ʙᴏᴛ](t.me/Disney_bots)
 
 """
     PROGRESS = """
-🔰 Sᴘᴇᴇᴅ : {3}/s\n\n
-🌀 Dᴏɴᴇ : {1}\n\n
-🎥 Tᴏᴛᴀʟ sɪᴢᴇ  : {2}\n\n
-⏳ Tɪᴍᴇ ʟᴇғᴛ : {4}\n\n
+<b>📁 Sɪᴢᴇ : {1} ✗ {2} </b>\n\n
+<b>🚀 Sᴘᴇᴇᴅ : {3}</b>/s\n\n
+<b>⏱️ Eᴛᴀ : {4}</b>\n\n
 """
     
     ABOUT_TEXT = """
-**Mʏ ɴᴀᴍᴇ** : [Renamer ʙᴏᴛ](http://t.me/MediaRenamerBot)
+**Mʏ ɴᴀᴍᴇ** : [ʀᴇɴᴀᴍᴇʀ ᴘʀᴏ ʙᴏᴛ](http://t.me/RenamerXProRobot)
 
-**Cʜᴀɴɴᴇʟ** : [Tᴇʟʟʏʙᴏᴛs](https://t.me/TellyBots)
+**Cʜᴀɴɴᴇʟ** : [ᴅɪsɴᴇʏ ʙᴏᴛs](https://t.me/Disney_Bots)
 
-**Vᴇʀꜱɪᴏɴ** : [2.0 ʙᴇᴛᴀ](https://t.me/TellyUploaderRobot)
+**Vᴇʀꜱɪᴏɴ** : [1.0 ʙᴇᴛᴀ](http://t.me/RenamerXProRobot)
 
-**Sᴏᴜʀᴄᴇ** : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/tellybots_digital)
+**Sᴏᴜʀᴄᴇ** : [ᴄʟɪᴄᴋ ʜᴇʀᴇ](https://t.me/Tamilanbots)
 
 **Sᴇʀᴠᴇʀ** : [ʜᴇʀᴏᴋᴜ](https://heroku.com/)
 
@@ -52,24 +51,24 @@ Pᴏᴡᴇʀᴇᴅ ʙʏ : [ᴅɪsɴᴇʏ ʙᴏᴛ](t.me/Disney_bots)
 
 **Fʀᴀᴍᴇᴡᴏʀᴋ :** [ᴘʏʀᴏɢᴀᴍ 1.3.6](https://docs.pyrogram.org/)
 
-**Dᴇᴠᴇʟᴏᴘᴇʀ :** [Tᴇʟʟʏʙᴏᴛs](https://t.me/tellybots)
+**Dᴇᴠᴇʟᴏᴘᴇʀ :** [EᴀʀɴMᴏɴᴇʏVIP](https://t.me/Tamilanbots)
 
-**Pᴏᴡᴇʀᴇᴅ ʙʏ :** [NᴀʏsᴀBᴏᴛs](https://t.me/NaysaBots)
+**Pᴏᴡᴇʀᴇᴅ ʙʏ :** [@DɪsɴᴇʏHDLɪɴᴋs](https://t.me/DisneyHDlinks)
 
 """
 
-    HELP_TEXT = """Yᴏᴜ ɴᴇᴇᴅ Hᴇʟᴘ ?? 😅
+    HELP_TEXT = """Yᴏᴜ ɴᴇᴇᴅ Hᴇʟᴘ ?? 
    
-✵ Fɪʀsᴛ ɢᴏ ᴛᴏ ᴛʜᴇ /sᴇᴛᴛɪɴɢs ᴀɴᴅ ᴄʜᴀɴɢᴇ ᴛʜᴇ ʙᴏᴛ ʙᴇʜᴀᴠɪᴏʀ ᴀs ʏᴏᴜʀ ᴄʜᴏɪᴄᴇ.
+𖣘 Fɪʀsᴛ ɢᴏ ᴛᴏ ᴛʜᴇ /sᴇᴛᴛɪɴɢs ᴀɴᴅ ᴄʜᴀɴɢᴇ ᴛʜᴇ ʙᴏᴛ ʙᴇʜᴀᴠɪᴏʀ ᴀs ʏᴏᴜʀ ᴄʜᴏɪᴄᴇ.
 
-✵ Sᴇɴᴅ ᴍᴇ ᴛʜᴇ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴛᴏ sᴀᴠᴇ ɪᴛ ᴘᴇʀᴍᴀɴᴇɴᴛʟʏ. (𝚘𝚙𝚝𝚒𝚘𝚗𝚊𝚕)
+𖣘 Sᴇɴᴅ ᴍᴇ ᴛʜᴇ ᴄᴜsᴛᴏᴍ ᴛʜᴜᴍʙɴᴀɪʟ ᴛᴏ sᴀᴠᴇ ɪᴛ ᴘᴇʀᴍᴀɴᴇɴᴛʟʏ. (𝚘𝚙𝚝𝚒𝚘𝚗𝚊𝚕)
 
-✵ Nᴏᴡ sᴇɴᴅ ᴍᴇ ᴛʜᴇ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇɴᴀᴍᴇ.
+𖣘 Nᴏᴡ sᴇɴᴅ ᴍᴇ ᴛʜᴇ ғɪʟᴇ ᴏʀ ᴠɪᴅᴇᴏ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ʀᴇɴᴀᴍᴇ.
 
-✵ Aғᴛᴇʀ ᴛʜᴀᴛ ʙᴏᴛ ᴡɪʟʟ ᴀsᴋ ʏᴏᴜ ғᴏʀ ᴛʜᴇ Nᴇᴡ Nᴀᴍᴇ ᴛʜᴇɴ sᴇɴᴅ ᴛʜᴇ Nᴇᴡ ғɪʟᴇ ɴᴀᴍᴇ ᴡɪᴛʜ ᴏʀ ᴡɪᴛʜᴏᴜᴛ Exᴛᴇɴᴛɪᴏɴ.
+𖣘 Aғᴛᴇʀ ᴛʜᴀᴛ ʙᴏᴛ ᴡɪʟʟ ᴀsᴋ ʏᴏᴜ ғᴏʀ ᴛʜᴇ Nᴇᴡ Nᴀᴍᴇ ᴛʜᴇɴ sᴇɴᴅ ᴛʜᴇ Nᴇᴡ ғɪʟᴇ ɴᴀᴍᴇ ᴡɪᴛʜ ᴏʀ ᴡɪᴛʜᴏᴜᴛ Exᴛᴇɴᴛɪᴏɴ.
 
-✵ Tʜᴇɴ ʙᴇ ʀᴇʟᴀxᴇᴅ ʏᴏᴜʀ ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴜᴘʟᴏᴀᴅᴇᴅ sᴏᴏɴ..
+𖣘 Tʜᴇɴ ʙᴇ ʀᴇʟᴀxᴇᴅ ʏᴏᴜʀ ғɪʟᴇ ᴡɪʟʟ ʙᴇ ᴜᴘʟᴏᴀᴅᴇᴅ sᴏᴏɴ..
 
 
-⚠️ Nᴏᴛᴇ: Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ʙᴏᴛ ᴄᴀᴘᴛɪᴏɴ Gᴏ ᴛᴏ /settings >> Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ
+⚠︎ Nᴏᴛᴇ: Iғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴄʜᴀɴɢᴇ ʙᴏᴛ ᴄᴀᴘᴛɪᴏɴ Gᴏ ᴛᴏ /settings >> Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ
 """
